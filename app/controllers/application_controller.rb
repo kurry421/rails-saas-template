@@ -92,13 +92,13 @@ class ApplicationController < ActionController::Base
         dashboard: { title: 'Dashboard', url: tenant_root_path, icon: 'tachometer' }
       }
       settings_menu = {
-        settings_dashboard: { title: 'Dashboard', url: settings_root_path },
-        settings_account: { title: 'Details', url: settings_account_path },
-        settings_card: { title: 'Credit Card', url: settings_card_path },
-        settings_invoices: { title: 'Invoices', url: settings_invoices_path },
-        settings_plan: { title: 'Plan', url: settings_plan_path },
-        settings_users: { title: 'Users', url: settings_user_permissions_path },
-        settings_user_invitations: { title: 'User Invitations', url: settings_user_invitations_path }
+        settings_dashboard: { title: 'Dashboard', url: settings_root_path, icon: 'tachometer' },
+        settings_account: { title: 'Details', url: settings_account_path, icon: 'cog' },
+        settings_card: { title: 'Credit Card', url: settings_card_path, icon: 'credit-card' },
+        settings_invoices: { title: 'Invoices', url: settings_invoices_path, icon: 'file' },
+        settings_plan: { title: 'Plan', url: settings_plan_path, icon: 'money' },
+        settings_users: { title: 'Users', url: settings_user_permissions_path, icon: 'users' },
+        settings_user_invitations: { title: 'User Invitations', url: settings_user_invitations_path, icon: 'envelope' }
       }
       if can? :index, :settings_dashboard
         @sidebar_menu[:settings] = { title: 'Settings', url: settings_root_path, submenu: settings_menu, icon: 'cogs' }
