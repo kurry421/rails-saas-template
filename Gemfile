@@ -78,6 +78,9 @@ gem 'delayed_job_active_record', '~> 4.0.3'
 gem 'stripe', '~> 1.22'
 gem 'stripe_event', '~> 1.5.0'
 
+ gem 'sqlite3'
+
+
 # Code quality tools
 group :development do
   gem 'bullet', '~> 4.14.0'
